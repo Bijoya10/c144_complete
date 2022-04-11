@@ -1,11 +1,12 @@
-import csv
+import ast
+import pandas as pd
 
-all_movies = []
 
-with open('final.csv') as f:
-    reader = csv.reader(f)
-    data = list(reader)
-    all_movies = data[1:]
+
+movies_data = pd.read_csv('final.csv')
+all_movies = movies_data[1:]
+#all_movies =all_movies.iloc[1: , :]
+print(all_movies.iloc[0,27])
 
 liked_movies = []
 not_liked_movies = []

@@ -1,6 +1,6 @@
 import csv
 
-with open('movies.csv') as f:
+with open('movies.csv' , encoding='utf-8') as f:
     reader = csv.reader(f)
     data = list(reader)
     all_movies = data[1:]
@@ -8,11 +8,11 @@ with open('movies.csv') as f:
 
 headers.append("poster_link")
 
-with open("final.csv", "a+") as f:
+with open("final.csv", "a+", encoding='utf-8') as f:
     csvwriter = csv.writer(f)
     csvwriter.writerow(headers)
 
-with open("movie_links.csv") as f:
+with open("movie_links.csv", encoding='utf-8') as f:
     reader = csv.reader(f)
     data = list(reader)
     all_movie_links = data[1:]
